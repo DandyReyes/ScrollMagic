@@ -1,3 +1,5 @@
+import ScrollMagic from 'scrollmagic';
+
 /*!
  * ScrollMagic v2.0.7 (2019-05-07)
  * The javascript library for magical scroll interactions.
@@ -27,7 +29,7 @@
 		factory(require('scrollmagic'));
 	} else {
 		// no browser global export needed, just execute
-		factory(root.ScrollMagic || (root.jQuery && root.jQuery.ScrollMagic));
+		factory(ScrollMagic || (jQuery && jQuery.ScrollMagic));
 	}
 }(this, function (ScrollMagic) {
 	"use strict";
