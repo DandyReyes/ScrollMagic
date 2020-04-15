@@ -1,3 +1,6 @@
+import { TimelineMax, TweenMax, TweenLite} from "gsap/all";
+import ScrollMagic from "scrollmagic";
+
 /*!
  * ScrollMagic v2.0.7 (2019-05-07)
  * The javascript library for magical scroll interactions.
@@ -36,7 +39,7 @@
 		factory(require('scrollmagic'), TweenMax, TimelineMax);
 	} else {
 		// Browser globals
-		factory(root.ScrollMagic || (root.jQuery && root.jQuery.ScrollMagic), root.TweenMax || root.TweenLite, root.TimelineMax || root.TimelineLite);
+		factory(ScrollMagic || (jQuery && root.jQuery.ScrollMagic), TweenMax || TweenLite, TimelineMax || TimelineLite);
 	}
 }(this, function (ScrollMagic, Tween, Timeline) {
 	"use strict";
